@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Game</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <button class = "start" type="button">Start Game</button>
+    </div>
+
+    <div class="box">
+        <h1> Baseball Trivia</h1>
+
+        <h2 class="timer">Time Remaining 30 Seconds </h2>
+
+        <h3 class="q1"> Which MLB Team won the 2011 world series?</h3>
+        <button class="a1" type="button">St. Louis Cardinals</button>
+        <button class="a2" type="button"> New York Yankees</button>
+        <button class="a3" type="button">Boston Redsox</button>
+        <button class="a4" type="button">Kansas City Royals</button>
+        <h3 class="q2"> Baseball</h3>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <h3 class="q3"> Baseball</h3>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <h3 class="q4"> Baseball</h3>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <h3 class="q5"> Baseball</h3>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <h3 class="q6"> Baseball</h3>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+        <button type="button">Ball</button>
+    </div>
+
+</body>
+
+<style>
+    .box {
+        background-color: grey;
+        margin-left: 100px;
+        margin-right: 100px;
+        line-height: 25px;
+        border-radius: 10px;
+    }
+
+    body {
+        background-image: url("assets/images/pexels-photo-1308713.jpg");
+        background-repeat: no-repeat;
+        background-size: 1300px 1300px;
+        text-align: center;
+    }
+
+    h1 {
+        color: darkred;
+    }
+
+   .start{
+align: center;
+font-size: 50px;
+margin-top: 10%;
+    }
+
+</style>
+
+<script> 
+
+    $(document).ready(function () {
+
+        // event listeners
+        $(".box").hide();
+        $(".start").on('click', trivia.startGame);
+        $(document).on('click', '.option', trivia.guessChecker);
+
+    })
+
+</script>
+
+
+</html>
