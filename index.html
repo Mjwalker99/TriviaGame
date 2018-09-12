@@ -11,12 +11,12 @@
 <body>
     <div class="container">
 
-        <button class = "start" type="button">Start Game</button>
+        <button class="start" type="button">Start Game</button>
     </div>
 
     <div class="box">
         <h1> Baseball Trivia</h1>
-
+        <hr>
         <h2 class="timer">Time Remaining 30 Seconds </h2>
 
         <h3 class="q1"> Which MLB Team won the 2011 world series?</h3>
@@ -24,37 +24,50 @@
         <button class="a2" type="button"> New York Yankees</button>
         <button class="a3" type="button">Boston Redsox</button>
         <button class="a4" type="button">Kansas City Royals</button>
-        <h3 class="q2"> Baseball</h3>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <h3 class="q3"> Baseball</h3>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <h3 class="q4"> Baseball</h3>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <h3 class="q5"> Baseball</h3>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <h3 class="q6"> Baseball</h3>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
-        <button type="button">Ball</button>
+        <h3 class="q2"> Who was the NL MVP in 2017?</h3>
+        <button class="b1" type="button">Joey Votto</button>
+        <button class="b2" type="button">Paul Goldschmidt</button>
+        <button class="b3" type="button">Giancarlo Stanton </button>
+        <button class="b4" type="button">Nolan Arenado</button>
+        <h3 class="q3"> Who was the AL MVP in 2017?</h3>
+        <button class="c1" type="button">Aaron Judge</button>
+        <button class="c2" type="button">Jose Altuve</button>
+        <button class="c3" type="button">Mike Trout</button>
+        <button class="c4" type="button">Francisco Lindor</button>
+        <h3 class="q4"> Which MLB team has the most World Series titles?</h3>
+        <button class="d1" type="button">Boston Redsox</button>
+        <button class="d2" type="button">St. Louis Cardinals</button>
+        <button class="d3" type="button">Pittsburg Pirates</button>
+        <button class="d4" type="button">New York Yankees</button>
+        <h3 class="q5"> Which state has the most MLB teams?</h3>
+        <button class="e1" type="button">Texas</button>
+        <button class="e2" type="button">Florida</button>
+        <button class="e3" type="button">California</button>
+        <button class="e4" type="button">New York</button>
+        <h3 class="q6"> To win a World Series a team has to win best of _ games? </h3>
+        <button class="f1" type="button">7</button>
+        <button class="f2" type="button">5</button>
+        <button class="f3" type="button">9</button>
+        <button class="f4" type="button">3</button>
+        <hr>
+        <button class="done" type="button">Done</button>
+    </div>
+
+    <div class="alldone">
+        <h3>All done!</h6>
+            <br>
+
+            <h6 class="correct">Correct Answers : 0</h6>
+            <h6 class="incorrect"> Incorrect Answers: 0</h6>
+            <h6 class="unanswered"> Unanswered: 0</h6>
+
     </div>
 
 </body>
 
 <style>
-    .box {
+    .box,
+    .alldone {
         background-color: grey;
         margin-left: 100px;
         margin-right: 100px;
@@ -71,26 +84,66 @@
 
     h1 {
         color: darkred;
+        padding-top: 10px;
     }
 
-   .start{
-align: center;
-font-size: 50px;
-margin-top: 10%;
+    .start {
+        align: center;
+        font-size: 50px;
+        margin-top: 10%;
     }
 
+    .timer {
+        border: solid darkred 1px;
+    }
+
+    .done {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .alldone {
+        background: grey;
+        line-height: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-right: 40%;
+        margin-left: 40%;
+    }
 </style>
 
 <script> 
 
     $(document).ready(function () {
 
-        // event listeners
-        $(".box").hide();
-        $(".start").on('click', trivia.startGame);
-        $(document).on('click', '.option', trivia.guessChecker);
+        var game = {
+            correct: 0,
+            incorrect: 0,
+            unanswered: 0,
+        }
 
-    })
+
+        $(".box").hide();
+        $(".alldone").hide();
+        $(".start").click(function () {
+
+
+            $(".box").show();
+            $(".start").hide();
+
+            $(".done").click(function () {
+
+                $(".box").hide();
+                $(".alldone").show();
+            });
+        });
+
+
+
+
+
+
+    });
 
 </script>
 
