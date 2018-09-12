@@ -59,12 +59,12 @@ $(document).ready(function () {
     var questionDisplay = function () {
         $(".questions :not('#sub-but')").empty();
 
-        for (var j = 0; j < 6; j++) {
-            $('.questions').prepend('<div class="' + questions[j].name + '"></div>');
-            $(questions[j].divClass).append('<div class ="ques-title">' + questions[j].ques + '</div>');
+        for (var x = 0; x < 6; x++) {
+            $('.questions').prepend('<div class="' + questions[x].name + '"></div>');
+            $(questions[x].divClass).append('<div class ="ques-title">' + questions[x].ques + '</div>');
 
             for (var i = 0; i <= 3; i++) {
-                $(questions[j].divClass).append('<input type="radio"  name="' + questions[j].name + '" value="' + questions[j].ans[i] + '"/><label for="' + labels[i] + '">' + questions[j].ans[i] + '</label>');
+                $(questions[x].divClass).append('<input type="radio"  name="' + questions[x].name + '" value="' + questions[x].ans[i] + '"/><label for="' + labels[i] + '">' + questions[x].ans[i] + '</label>');
             }
             $('.questions').prepend('<hr />');
         }
