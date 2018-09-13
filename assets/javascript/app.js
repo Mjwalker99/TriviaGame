@@ -1,49 +1,59 @@
 $(document).ready(function () {
 
+
     var questions = [{
         ques: "Which MLB Team won the 2011 world series?",
-        ans: ["St. Louis Cardinals", "New York Yankees", "Boston Redsox", "Kansas city Royals"],
+        ans: ["St. Louis Cardinals", "New York Yankees", "Boston Redsox", "Kansas City Royals"],
         name: "Cardinals",
         correct: "St. Louis Cardinals",
-        divClass: ".Cardinals"
+        divClass: ".Cardinals",
+        inCorrect: ["New York Yankees", "Boston Redsox", "Kansas City Royals"]
+
     },
+
     {
         ques: "Who was the NL MVP in 2017?",
         ans: ["Joey Votto", "Paul Goldschmidt", "Giancarlo Stanton", "Nolan Arenado"],
         name: "Stanton",
         correct: "Giancarlo Stanton",
-        divClass: ".Stanton"
+        divClass: ".Stanton",
+        inCorrect: ["Joey Votto", "Paul Goldschmidt", "Nolan Arenado"]
     },
     {
         ques: "Who was the AL MVP IN 2017?",
         ans: ["Aaron Judge", "Jose Altuve", "Mike Trout", "Francisco Lindor"],
         name: "Altuve",
         correct: "Jose Altuve",
-        divClass: ".Altuve"
+        divClass: ".Altuve",
+        inCorrect: ["Aaron Judge", "Mike Trout", "Francisco Lindor"]
     },
     {
         ques: "Which MLB team has the most World Series titles?",
         ans: ["Boston Redsox", "St. Louis Cardinals", "Pittsburg Pirates", "New York Yankees"],
         name: "Yankees",
         correct: "New York Yankees",
-        divClass: ".Yankees"
+        divClass: ".Yankees",
+        inCorrect: ["Boston Redsox", "St. Louis Cardinals", "Pittsburg Pirates"]
     },
     {
         ques: "Which state has the most MLB teams?",
         ans: ["Texas", "Florida", "California", "New York"],
         name: "Cali",
         correct: "California",
-        divClass: ".Cali"
+        divClass: ".Cali",
+        inCorrect: ["Texas", "Florida", "New York"]
     },
     {
         ques: "To win a World Series a team has to win best of _ games?",
         ans: ["7", "5", "9", "3"],
         name: "Seven",
         correct: "7",
-        divClass: ".Seven"
+        divClass: ".Seven",
+        inCorrect: ["5", "9", "3"]
     },
 
     ]
+
 
     var labels = ["first", "second", "third", "forth"];
 
@@ -51,7 +61,7 @@ $(document).ready(function () {
     var startGame = $("#start-btn").on('click', function () {
         $(this).parent().hide();
         $('.container').show();
-        countdown(60);
+        countdown(10);
         questionDisplay();
     });
 
