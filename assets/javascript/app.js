@@ -7,8 +7,6 @@ $(document).ready(function () {
         name: "Cardinals",
         correct: "St. Louis Cardinals",
         divClass: ".Cardinals",
-        inCorrect: ["New York Yankees", "Boston Redsox", "Kansas City Royals"]
-
     },
 
     {
@@ -17,7 +15,7 @@ $(document).ready(function () {
         name: "Stanton",
         correct: "Giancarlo Stanton",
         divClass: ".Stanton",
-        inCorrect: ["Joey Votto", "Paul Goldschmidt", "Nolan Arenado"]
+
     },
     {
         ques: "Who was the AL MVP IN 2017?",
@@ -25,15 +23,14 @@ $(document).ready(function () {
         name: "Altuve",
         correct: "Jose Altuve",
         divClass: ".Altuve",
-        inCorrect: ["Aaron Judge", "Mike Trout", "Francisco Lindor"]
+
     },
     {
         ques: "Which MLB team has the most World Series titles?",
         ans: ["Boston Redsox", "St. Louis Cardinals", "Pittsburg Pirates", "New York Yankees"],
         name: "Yankees",
         correct: "New York Yankees",
-        divClass: ".Yankees",
-        inCorrect: ["Boston Redsox", "St. Louis Cardinals", "Pittsburg Pirates"]
+        divClass: ".Yankees"
     },
     {
         ques: "Which state has the most MLB teams?",
@@ -41,7 +38,7 @@ $(document).ready(function () {
         name: "Cali",
         correct: "California",
         divClass: ".Cali",
-        inCorrect: ["Texas", "Florida", "New York"]
+
     },
     {
         ques: "To win a World Series a team has to win best of _ games?",
@@ -49,7 +46,7 @@ $(document).ready(function () {
         name: "Seven",
         correct: "7",
         divClass: ".Seven",
-        inCorrect: ["5", "9", "3"]
+
     },
 
     ]
@@ -61,7 +58,7 @@ $(document).ready(function () {
     var startGame = $("#start-btn").on('click', function () {
         $(this).parent().hide();
         $('.container').show();
-        countdown(10);
+        countdown(30);
         questionDisplay();
     });
 
@@ -155,7 +152,7 @@ $(document).ready(function () {
                 unAnswered++;
             }
         }
-
+        console.log(unAnswered);
 
         countdown();
 
@@ -168,6 +165,5 @@ $(document).ready(function () {
         $('#wrongScreen').append(wrongAnswers);
 
         $('#unanswered').append(unAnswered);
-
     });
-});
+    });
