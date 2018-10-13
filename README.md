@@ -11,4 +11,4 @@ you will be directed to the next screen displaying your correct and incorrect an
 
 Refreshing the page will restart the game.
 
-
+https://mjwalker99.github.io/TriviaGame/.
